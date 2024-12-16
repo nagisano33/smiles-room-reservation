@@ -1,0 +1,13 @@
+{
+  "name": "@repo/tailwind-config",
+  "version": "1.0.0",
+  "description": "A configuration of tailwindcss",
+  "license": "ISC",
+  "devDependencies": {
+    "@repo/typescript-config": "*",
+    "tailwindcss": "^3.4.16"
+  },
+  "exports": {
+    ".": "./tailwind.config.ts"
+  }
+}
