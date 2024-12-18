@@ -1,6 +1,6 @@
 export function Header() {
   return (
-    <div className="flex p-1 justify-between">
+    <div className="flex p-4 justify-between">
       <h1 className="text-3xl">Smiles Music Salon</h1>
 
       <table>
