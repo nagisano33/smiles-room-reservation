@@ -18,8 +18,8 @@
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
     "@repo/tailwind-config": "*",
+    "@repo/typescript-config": "*",
     "@turbo/gen": "^1.12.4",
     "@types/node": "^20.11.24",
     "@types/react": "18.3.0",
@@ -30,6 +30,7 @@
     "typescript": "5.5.4"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   }
