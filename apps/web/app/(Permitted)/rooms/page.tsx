@@ -1,3 +1,7 @@
 export default function Rooms() {
-  return <h2 className="text-2xl">Rooms</h2>
+  return (
+    <div>
+      <span>部屋を選択してください</span>
+    </div>
+  );
 }
