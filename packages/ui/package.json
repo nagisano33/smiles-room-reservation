@@ -5,7 +5,8 @@
   "private": true,
   "exports": {
     "./styles.css": "./dist/index.css",
-    "./Form/*": "./src/Form/*.tsx"
+    "./Form/*": "./src/Form/*.tsx",
+    "./Material/*": "./src/Material/*.tsx"
   },
   "scripts": {
     "build": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
