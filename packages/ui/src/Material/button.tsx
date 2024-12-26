@@ -1,15 +1,37 @@
 import { PropsWithChildren } from "react";
 
-type Props = {
+export type ButtonProps = {
+  /**
+   * A callback function that is triggered when users click on a button
+   */
   onClick: () => void;
+
+  /**
+   * A state which means disabled or not
+   */
+  disabled?: boolean;
 };
 
-export function Button({ onClick, children }: PropsWithChildren<Props>) {
+/**
+ * An abstract button triggers a callback function when users click on this component
+ * 
+ * @param {PropsWithChildren<Props>} props
+ * - An object contains a callback function that is triggered when users click on this component
+ *   and a state of this component which means disabled or not
+ * 
+ * @returns {JSX.Element} A functional component
+ */
+export function Button({
+  onClick,
+  disabled,
+  children,
+}: PropsWithChildren<ButtonProps>): JSX.Element {
   return (
     <button
       className={
         "min-w-[160px] w-full h-12 border-0 bg-blue-500 rounded-lg text-gray-50 hover:bg-blue-300 font-bold active:bg-blue-600"
       }
+      disabled={disabled}
       onClick={onClick}
     >
       {children}
