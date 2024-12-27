@@ -2,7 +2,7 @@
 
 import { Button, type ButtonProps } from "@repo/ui/Material/button";
 import { FaRegCircle } from "react-icons/fa";
-import { RxCross1 } from "react-icons/rx";
+import { ImCross } from "react-icons/im";
 
 type Props = ButtonProps;
 
@@ -17,7 +17,7 @@ export function BookingScheduler({ onClick, disabled }: Props): JSX.Element {
     <Button onClick={onClick} disabled={disabled}>
       <div className="w-full h-full grid place-items-center">
         {disabled ? (
-          <RxCross1 size={"1.5em"} />
+          <ImCross size={"1.5em"} />
         ) : (
           <FaRegCircle size={"1.5em"} />
         )}
