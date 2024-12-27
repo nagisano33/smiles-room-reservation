@@ -33,8 +33,16 @@ export default function RootLayout({
           <Header />
         </header>
 
-        <main className="px-16">
-          <div className="p-8 bg-gray-50 rounded-md">{children}</div>
+        <main
+          className="
+            grid grid-cols-[1fr] place-content-center 
+            w-screen
+            md:grid-cols-[max(768px)]
+          "
+        >
+          <div className="grid w-full p-8 bg-gray-50 rounded-md">
+            {children}
+          </div>
         </main>
 
         <footer className="mt-auto">
