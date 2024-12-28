@@ -16,7 +16,7 @@ type Props = {
 export function Select({ defaultValue, values, onChange = () => {} }: Props) {
   return (
     <HeadlessUISelect
-    className={"min-w-[120px] h-8"}
+    className={"min-w-[120px] h-10 border-gray-500 border-[1px] rounded-md px-2"}
       defaultValue={defaultValue}
       onChange={(event) => onChange(event.target.value)}
     >
