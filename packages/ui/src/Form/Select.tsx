@@ -1,12 +1,12 @@
 "use client";
 
+import type { PropsWithChildren } from "react";
 import { Select as HeadlessUISelect } from "@headlessui/react";
 
 export type SelectProps = {
   defaultValue?: string | number | readonly string[];
   onChange?: (value: string) => void;
   onBlur?: () => void;
-  children: JSX.Element
 };
 
 export function Select({
@@ -14,7 +14,7 @@ export function Select({
   onChange = () => {},
   onBlur,
   children,
-}: SelectProps) {
+}: PropsWithChildren<SelectProps>) {
   return (
     <HeadlessUISelect
       className={

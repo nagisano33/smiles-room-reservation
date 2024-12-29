@@ -1,13 +1,12 @@
 "use client";
 
+import type { PropsWithChildren } from "react";
 import { Select, type SelectProps } from "@repo/ui/Form/Select";
 import { useRouter } from "next/navigation";
 
-type Props = Pick<SelectProps, "defaultValue"> & {
-  children: JSX.Element;
-};
+type Props = Pick<SelectProps, "defaultValue">;
 
-export function RoomSelect({ defaultValue, children }: Props) {
+export function RoomSelect({ defaultValue, children }: PropsWithChildren<Props>) {
   const router = useRouter();
 
   return (
