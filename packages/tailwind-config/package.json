@@ -4,7 +4,7 @@
   "description": "A configuration of tailwindcss",
   "license": "ISC",
   "devDependencies": {
-    "@repo/typescript-config": "*",
+    "@repo/typescript-config": "workspace:*",
     "tailwindcss": "^3.4.16"
   },
   "exports": {
