@@ -22,13 +22,11 @@ export default async function Room({ params }: Params) {
   return (
     <>
       <RoomSelect defaultValue={id}>
-        <>
           {rooms.map(({ id, name }) => (
             <option key={id} value={id}>
               {name}
             </option>
           ))}
-        </>
       </RoomSelect>
       <h2 className="text-2xl">Room (ID: {id})</h2>
       <TimeTable />
