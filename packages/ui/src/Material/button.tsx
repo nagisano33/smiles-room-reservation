@@ -1,4 +1,6 @@
 import { PropsWithChildren } from "react";
+import clsx from "clsx";
+import { Button as CnButton } from "@/components/ui/button.js";
 
 export type ButtonProps = {
   /**
@@ -10,34 +12,37 @@ export type ButtonProps = {
    * A state which means disabled or not
    */
   disabled?: boolean;
+
+  /**
+   * If true, this component will take the full width.
+   */
+  fullWidth?: boolean;
 };
 
 /**
  * An abstract button triggers a callback function when users click on this component
  *
  * @param {PropsWithChildren<Props>} props
- * - An object contains a callback function that is triggered when users click on this component
- *   and a state of this component which means disabled or not
+ * - An object contains a callback function that is triggered when users click on this component,
+ *   and some states how to show this component
  *
  * @returns {JSX.Element} A functional component
  */
 export function Button({
   onClick,
   disabled,
+  fullWidth,
   children,
 }: PropsWithChildren<ButtonProps>): JSX.Element {
   return (
-    <button
-      className="
-        min-w-[160px] w-full h-12 border-0 bg-blue-500 rounded-lg text-gray-50 font-bold 
-        hover:bg-blue-300 
-        active:bg-blue-600 
-        disabled:bg-blue-100 disabled:text-blue-400
-      "
-      disabled={disabled}
+    <CnButton
+      className={clsx({
+        "w-full": fullWidth,
+      })}
       onClick={onClick}
+      disabled={disabled}
     >
       {children}
-    </button>
+    </CnButton>
   );
 }
