@@ -14,7 +14,7 @@ type Props = ButtonProps;
  */
 export function BookingScheduler({ onClick, disabled }: Props): JSX.Element {
   return (
-    <Button onClick={onClick} disabled={disabled}>
+    <Button onClick={onClick} disabled={disabled} fullWidth>
       <div className="w-full h-full grid place-items-center">
         {disabled ? (
           <ImCross size={"1.5em"} />
