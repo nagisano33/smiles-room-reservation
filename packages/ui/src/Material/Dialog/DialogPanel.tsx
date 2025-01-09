@@ -1,9 +1,10 @@
-import { DialogPanel as HeadlessUIDialogPanel } from "@headlessui/react";
+import { DialogContent } from "@/components/ui/dialog.js";
+
 
 export function DialogPanel({ children }: React.PropsWithChildren<unknown>) {
   return (
-    <HeadlessUIDialogPanel className="w-screen h-[50vh] md:w-[768px] bg-white rounded-md">
+    <DialogContent className="w-screen h-[50vh] md:w-[768px] bg-white rounded-md">
       {children}
-    </HeadlessUIDialogPanel>
+    </DialogContent>
   );
 }

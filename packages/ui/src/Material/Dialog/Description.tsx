@@ -1,5 +1,5 @@
-import { Description as HeadlessUIDescription } from "@headlessui/react";
+import { DialogDescription } from "@/components/ui/dialog.js";
 
 export function Description({ children }: React.PropsWithChildren<unknown>) {
-  return <HeadlessUIDescription>{children}</HeadlessUIDescription>;
+  return <DialogDescription>{children}</DialogDescription>;
 }
