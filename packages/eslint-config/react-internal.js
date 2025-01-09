@@ -23,10 +23,16 @@ export const config = [
         ...globals.serviceworker,
         ...globals.browser,
       },
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,  // Enable JSX syntax support
+        },
+      },
     },
   },
   {
     plugins: {
+      "react": pluginReact,
       "react-hooks": pluginReactHooks,
     },
     settings: { react: { version: "detect" } },
