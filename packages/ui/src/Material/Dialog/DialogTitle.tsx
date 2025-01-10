@@ -1,11 +1,21 @@
 import type { PropsWithChildren } from "react";
 import { DialogTitle as CnDialogTitle } from "@/components/ui/dialog.js";
 
-export function DialogTitle({ children }: PropsWithChildren<unknown>) {
+type DialogTitleProps = {
+  /**
+   * show divider or not
+   */
+  divider?: boolean;
+};
+
+export function DialogTitle({
+  divider,
+  children,
+}: PropsWithChildren<DialogTitleProps>) {
   return (
     <CnDialogTitle>
       <div className="font-bold text-2xl p-4">{children}</div>
-      <hr className="mb-4" />
+      {divider && <hr className="mb-4" />}
     </CnDialogTitle>
   );
 }
