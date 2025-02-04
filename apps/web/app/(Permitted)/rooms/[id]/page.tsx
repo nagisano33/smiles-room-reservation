@@ -1,5 +1,6 @@
 import { RoomSelect } from "../_components/RoomSelect";
 import { TimeTable } from "./_components/TimeTable";
+import { BookingForm } from "./_components/BookingForm";
 
 type Params = {
   params: Promise<{ id?: string }>;
@@ -22,14 +23,15 @@ export default async function Room({ params }: Params) {
   return (
     <>
       <RoomSelect defaultValue={id}>
-          {rooms.map(({ id, name }) => (
-            <option key={id} value={id}>
-              {name}
-            </option>
-          ))}
+        {rooms.map(({ id, name }) => (
+          <option key={id} value={id}>
+            {name}
+          </option>
+        ))}
       </RoomSelect>
       <h2 className="text-2xl">Room (ID: {id})</h2>
       <TimeTable />
+      <BookingForm />
     </>
   );
 }
