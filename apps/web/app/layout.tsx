@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-gray-200 flex flex-col min-h-screen text-gray-900`}
+        className={`${geistSans.variable} ${geistMono.variable} bg-gray-200 flex flex-col min-w-[480px] min-h-screen text-gray-900`}
       >
         <header>
           <Header />
@@ -36,7 +36,7 @@ export default function RootLayout({
         <main
           className="
             grid grid-cols-[1fr] place-content-center 
-            w-screen
+            min-w-[480px] w-screen
             md:grid-cols-[max(768px)]
           "
         >
