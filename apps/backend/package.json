@@ -6,6 +6,9 @@
   "scripts": {
     "seed": "tsx prisma/seed.ts"
   },
+  "exports": {
+    "./retrieveReservable": "./src/retrieveReservable.ts"
+  },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
