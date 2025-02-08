@@ -1,0 +1,16 @@
+version: '3.1'
+services:
+  db:
+    image: postgres:15           # 利用する PostgreSQL のバージョン（例：14）
+    restart: always
+    environment:
+      POSTGRES_USER: postgres    # ユーザー名
+      POSTGRES_PASSWORD: yourpassword  # 任意のパスワードに変更
+      POSTGRES_DB: yourdbname    # データベース名（任意の名前）
+    ports:
+      - "5432:5432"              # ホストとコンテナのポートをマッピング
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # データ永続化用のボリューム
+
+volumes:
+  postgres_data:
