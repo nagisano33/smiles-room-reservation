@@ -14,6 +14,17 @@ model Company {
   updatedAt DateTime @updatedAt
 
   reservables Reservable[]
+
+  companySetting CompanySetting?
+}
+
+model CompanySetting {
+  companyId String   @id
+  company   Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  openAt    DateTime @db.Time()
+  closedAt  DateTime @db.Time()
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model Reservable {
