@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "seed": "tsx prisma/seed.ts"
+    "seed": "pnpm dlx tsx prisma/seed.ts"
   },
   "exports": {
     "./retrieveReservable": "./src/retrieveReservable.ts"
@@ -19,6 +19,6 @@
     "@prisma/client": "^6.3.1"
   },
   "prisma": {
-    "seed": "tsx prisma/seed.ts"
+    "seed": "pnpm dlx tsx prisma/seed.ts"
   }
 }
