@@ -14,6 +14,7 @@ async function main() {
         create: {
           openAt: "1970-01-01T08:00:00+09:00",
           closedAt: "1970-01-01T20:00:00+09:00",
+          interval: "1970-01-01T00:30:00+09:00",
         }
       },
       reservables: {
@@ -36,6 +37,7 @@ async function main() {
         create: {
           openAt: "1970-01-02T00:00:00+09:00",
           closedAt: "1970-01-03T00:00:00+09:00",
+          interval: "1970-01-01T00:15:00+09:00",
         }
       },
       reservables: {

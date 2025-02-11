@@ -23,6 +23,7 @@ model CompanySetting {
   company   Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
   openAt    DateTime @db.Time()
   closedAt  DateTime @db.Time()
+  interval  DateTime @db.Time() @default("1970-01-01T00:30:00+09:00")
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
