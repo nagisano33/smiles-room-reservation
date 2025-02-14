@@ -6,10 +6,10 @@ import dateTime, { DateTime } from "../../../../../_types/DateTime";
  * @returns {Promise<DateTime[]>} openingHoursTicks
  */
 export async function getOpeningHoursTicks(): Promise<DateTime[]> {
-  const { openAt, closedAt } = await fetchBookingSchedule();
+  const { openAt, closedAt } = await fetchBookingSchedule("28c664a5-3094-4b9f-b902-b667571c1b7a");
 
-  let current = dateTime(openAt)
-  const end = dateTime(closedAt);
+  let current = dateTime(openAt.toISOString())
+  const end = dateTime(closedAt.toISOString());
 
   const times = [];
   while (current.isBefore(end)) {
