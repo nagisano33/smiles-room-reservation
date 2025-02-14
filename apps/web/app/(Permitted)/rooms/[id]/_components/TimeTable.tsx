@@ -1,7 +1,10 @@
 import { getOpeningHoursTicks } from "../_BookingSchedule/services/getOpeningHoursTicks";
+import { retrieveReservable } from "backend/retrieveReservable";
 
 export async function TimeTable() {
   const times = await getOpeningHoursTicks();
+  const company = await retrieveReservable("28c664a5-3094-4b9f-b902-b667571c1b7a");
+  console.log(company);
 
   console.log(times);
   /**
