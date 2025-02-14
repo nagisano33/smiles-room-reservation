@@ -7,7 +7,9 @@
     "seed": "pnpm dlx tsx prisma/seed.ts"
   },
   "exports": {
-    "./retrieveReservable": "./src/retrieveReservable.ts"
+    "./retrieveReservable": "./src/retrieveReservable.ts",
+    "./CompanySetting/*": "./src/CompanySetting/*.ts",
+    "./Reservables/*": "./src/Reservables/*.ts"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
