@@ -1,35 +1,40 @@
+import { retrieveCompanySetting } from "backend/CompanySetting/queries/retrieveCompanySetting";
 export type BookingSchedule = {
   /**
    * it meands when the service start at.
    * @example "1970-01-01T08:00:00"
    */
-  openAt: string;
+  openAt: Date;
 
   /**
    * it meands when the service end at.
    * @example "1970-01-01T20:00:00"
    */
-  closedAt: string;
+  closedAt: Date;
 
   /**
    * the duration that users can book the service
    */
-  duration: number;
-}
+  interval: number;
+};
 
 /**
  * fetch the bookingSchedule from the server
  * @returns bookingSchedule
  */
-export default async function fetchBookingSchedule(): Promise<BookingSchedule> {
-  /**
-   * @todo
-   * data fetch
-   */
-  await new Promise((resolve) => setTimeout(resolve, 500));
+export default async function fetchBookingSchedule(
+  companyId: string
+): Promise<BookingSchedule> {
+  const { openAt, closedAt, interval } =
+    await retrieveCompanySetting(companyId);
   return {
-    openAt: "1970-01-01T08:00:00",
-    closedAt: "1970-01-01T20:00:00",
-    duration: 30,
+    openAt,
+    closedAt,
+    interval: interval.getMinutes(),
   };
 }
+
+/**
+ * @memo
+ * OpeningHours の方が良いかも
+ */
