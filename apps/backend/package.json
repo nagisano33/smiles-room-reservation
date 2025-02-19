@@ -4,6 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "migrate": "pnpm dlx prisma migrate dev",
     "seed": "pnpm dlx tsx prisma/seed.ts"
   },
   "exports": {
