@@ -8,7 +8,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "web": "pnpm -F \"web\"",
     "backend": "pnpm -F \"backend\"",
-    "ui": "pnpm -F \"@repo/ui\""
+    "ui": "pnpm -F \"@repo/ui\"",
+    "auth": "pnpm -F \"@repo/auth\""
   },
   "devDependencies": {
     "prettier": "^3.2.5",
