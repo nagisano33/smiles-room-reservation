@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "migrate": "pnpm dlx prisma migrate dev",
+    "generate": "pnpm dlx prisma generate --schema=./prisma/schema.prisma",
     "seed": "pnpm dlx tsx prisma/seed.ts"
   },
   "exports": {
